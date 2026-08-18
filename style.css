@@ -51,18 +51,30 @@ main {
 
 .hero {
   min-height: 480px;
-  background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.35),
-      rgba(0, 0, 0, 0.55)
-    ),
-    url("https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=1600&q=80")
-    center / cover;
+  background: linear-gradient(
+    135deg,
+    #111 0%,
+    #292929 55%,
+    #555 100%
+  );
 
   display: flex;
   align-items: flex-end;
   padding: 40px 25px;
   color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "BASKETBALL";
+  position: absolute;
+  right: -20px;
+  top: 80px;
+  font-size: 80px;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.05);
+  transform: rotate(-90deg);
 }
 
 .hero h2 {
