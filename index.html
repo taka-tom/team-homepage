@@ -1,57 +1,330 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>○○チーム</title>
-  
+  <title>○○ BASKETBALL TEAM</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+  <!-- ヘッダー -->
+
   <header>
-    <h1>○○チーム</h1>
-    <p>チームホームページ</p>
+    <h1>○○ BASKETBALL</h1>
+    <span>☰</span>
   </header>
+
 
   <main>
 
-    <section>
-      <h2>📅 チームの予定</h2>
-      <p>練習・試合などの予定を確認できます。</p>
+    <!-- メインビジュアル -->
 
-      <!-- 後でGoogleカレンダーをここに入れる -->
+    <div class="hero">
+
       <div>
-        Googleカレンダー
+        <h2>
+          WE PLAY<br>
+          TOGETHER.
+        </h2>
+
+        <p>
+          ○○ BASKETBALL TEAM
+        </p>
       </div>
-    </section>
+
+    </div>
+
+
+    <!-- 次の予定 -->
 
     <section>
-      <h2>📷 写真</h2>
-      <p>チームの写真を見ることができます。</p>
 
-      <a href="#">写真を見る</a>
+      <h2>NEXT GAME</h2>
+
+      <div class="next-game">
+
+        <div class="label">
+          NEXT MATCH
+        </div>
+
+        <div class="match">
+
+          <div class="team">
+            ○○
+          </div>
+
+          <div class="vs">
+            VS
+          </div>
+
+          <div class="team">
+            △△
+          </div>
+
+        </div>
+
+        <div class="date">
+          2026.08.24　14:00
+        </div>
+
+      </div>
+
     </section>
+
+
+    <!-- メニュー -->
 
     <section>
-      <h2>🔒 メンバー専用</h2>
-      <p>メンバー向けの情報はこちら。</p>
 
-      <a href="#">メンバー専用ページ</a>
+      <h2>MENU</h2>
+
+      <div class="cards">
+
+
+        <!-- スケジュール -->
+
+        <a href="#schedule" class="card">
+
+          <div class="card-icon">
+            📅
+          </div>
+
+          <h3>
+            SCHEDULE
+          </h3>
+
+          <p>
+            練習・試合予定
+          </p>
+
+        </a>
+
+
+        <!-- 写真 -->
+
+        <a href="#photo" class="card">
+
+          <div class="card-icon">
+            📷
+          </div>
+
+          <h3>
+            PHOTO
+          </h3>
+
+          <p>
+            チームの写真
+          </p>
+
+        </a>
+
+
+        <!-- お知らせ -->
+
+        <a href="#news" class="card">
+
+          <div class="card-icon">
+            📢
+          </div>
+
+          <h3>
+            NEWS
+          </h3>
+
+          <p>
+            チームからのお知らせ
+          </p>
+
+        </a>
+
+
+        <!-- メンバー -->
+
+        <a href="#member" class="card">
+
+          <div class="card-icon">
+            👥
+          </div>
+
+          <h3>
+            TEAM
+          </h3>
+
+          <p>
+            メンバー紹介
+          </p>
+
+        </a>
+
+      </div>
+
     </section>
 
-    <section>
-      <h2>📢 お知らせ</h2>
-      <p>チームからのお知らせを掲載します。</p>
+
+    <!-- スケジュール -->
+
+    <section id="schedule">
+
+      <h2>SCHEDULE</h2>
+
+      <div class="news">
+
+        <div class="news-item">
+
+          <div class="news-date">
+            2026.08.24
+          </div>
+
+          <div class="news-title">
+            練習
+          </div>
+
+        </div>
+
+
+        <div class="news-item">
+
+          <div class="news-date">
+            2026.08.30
+          </div>
+
+          <div class="news-title">
+            練習試合
+          </div>
+
+        </div>
+
+      </div>
+
     </section>
+
+
+    <!-- 写真 -->
+
+    <section id="photo">
+
+      <h2>PHOTO</h2>
+
+      <div class="cards">
+
+        <a href="#" class="card">
+
+          <div class="card-icon">
+            📸
+          </div>
+
+          <h3>
+            TEAM PHOTO
+          </h3>
+
+          <p>
+            チームの写真を見る
+          </p>
+
+        </a>
+
+        <a href="#" class="card">
+
+          <div class="card-icon">
+            🏀
+          </div>
+
+          <h3>
+            GAME PHOTO
+          </h3>
+
+          <p>
+            試合の写真を見る
+          </p>
+
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- お知らせ -->
+
+    <section id="news">
+
+      <h2>NEWS</h2>
+
+      <div class="news">
+
+        <div class="news-item">
+
+          <div class="news-date">
+            2026.08.18
+          </div>
+
+          <div class="news-title">
+            チームホームページを開設しました
+          </div>
+
+        </div>
+
+
+        <div class="news-item">
+
+          <div class="news-date">
+            2026.08.10
+          </div>
+
+          <div class="news-title">
+            次回の練習について
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- チーム -->
+
+    <section id="member">
+
+      <h2>TEAM</h2>
+
+      <div class="next-game">
+
+        <div class="label">
+          OUR TEAM
+        </div>
+
+        <div class="team">
+          ○○ BASKETBALL TEAM
+        </div>
+
+        <div class="date">
+          Let's play basketball together.
+        </div>
+
+      </div>
+
+    </section>
+
 
   </main>
 
+
+  <!-- フッター -->
+
   <footer>
-    <p>© 2026 ○○チーム</p>
+
+    <p>
+      © 2026 ○○ BASKETBALL TEAM
+    </p>
+
   </footer>
 
 </body>
+
 </html>
