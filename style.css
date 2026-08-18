@@ -15,14 +15,14 @@ body {
     "Hiragino Kaku Gothic ProN",
     "Yu Gothic",
     sans-serif;
-  background: #f3f3f3;
-  color: #111;
+  background: #0b1f3a;
+  color: #1677ff;
 }
 
 /* ヘッダー */
 
 header {
-  background: #111;
+  background: #0b1f3a;
   color: white;
   padding: 18px 20px;
   display: flex;
