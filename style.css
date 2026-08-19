@@ -324,3 +324,86 @@ footer {
 .view-all:hover {
   opacity: 0.7;
 }
+
+
+
+
+
+
+
+/* TEAM PAGE */
+
+.home-link {
+  color: #1677ff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.page-title {
+  padding-top: 20px;
+}
+
+.page-label {
+  color: #1677ff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 5px;
+}
+
+.team-card {
+  background: white;
+  padding: 28px 22px;
+  border-radius: 18px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.team-card h3 {
+  margin: 12px 0 18px;
+  font-size: 25px;
+  line-height: 1.2;
+}
+
+.team-card p {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.activity-item {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  background: white;
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.activity-icon {
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.activity-item h3 {
+  margin: 0 0 5px;
+  font-size: 16px;
+}
+
+.activity-item p {
+  margin: 0;
+  color: #666;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.back-home {
+  text-align: center;
+}
