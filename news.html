@@ -15,17 +15,49 @@
 
   <!-- ヘッダー -->
 
-  <header>
+<header>
 
-    <h1>
-      TAKAKURA BASKETBALL CLUB
-    </h1>
+  <h1>
+    TAKAKURA BASKETBALL CLUB
+  </h1>
 
-    <a href="index.html" class="home-link">
-      HOME
-    </a>
+  <button
+    class="menu-button"
+    onclick="toggleMenu()"
+    aria-label="メニュー">
 
-  </header>
+    ☰
+
+  </button>
+
+</header>
+
+
+<!-- ハンバーガーメニュー -->
+
+<nav id="mobile-menu" class="mobile-menu">
+
+  <a href="index.html">
+    HOME
+  </a>
+
+  <a href="schedule.html">
+    SCHEDULE
+  </a>
+
+  <a href="photo.html">
+    PHOTO
+  </a>
+
+  <a href="news.html">
+    NEWS
+  </a>
+
+  <a href="team.html">
+    TEAM
+  </a>
+
+</nav>
 
 
   <main>
@@ -166,6 +198,18 @@
 
   </footer>
 
+<script>
+
+  function toggleMenu() {
+
+    const menu =
+      document.getElementById("mobile-menu");
+
+    menu.classList.toggle("open");
+
+  }
+
+</script>
 
 </body>
 
