@@ -456,6 +456,64 @@
 
 </script>
 
+<script>
+
+  const heroSlides =
+    document.querySelectorAll(".hero-slide");
+
+  const heroDots =
+    document.querySelectorAll(".hero-dot");
+
+  let currentSlide = 0;
+
+
+  function showSlide(index) {
+
+    heroSlides.forEach(function(slide) {
+
+      slide.classList.remove("active");
+
+    });
+
+
+    heroDots.forEach(function(dot) {
+
+      dot.classList.remove("active");
+
+    });
+
+
+    heroSlides[index].classList.add("active");
+
+    heroDots[index].classList.add("active");
+
+    currentSlide = index;
+
+  }
+
+
+  function nextSlide() {
+
+    currentSlide++;
+
+    if (currentSlide >= heroSlides.length) {
+
+      currentSlide = 0;
+
+    }
+
+    showSlide(currentSlide);
+
+  }
+
+
+  /* 5秒ごとに切り替え */
+
+  setInterval(nextSlide, 5000);
+
+</script>
+
+
 </body>
 
 </html>
