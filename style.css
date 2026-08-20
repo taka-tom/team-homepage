@@ -407,3 +407,70 @@ footer {
 .back-home {
   text-align: center;
 }
+
+/* PHOTO PAGE */
+
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.photo-item {
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+.photo-item img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+
+
+.drive-card {
+  margin-top: 10px;
+  background: white;
+  padding: 28px 22px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.drive-icon {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.drive-card h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.drive-card p {
+  margin: 0 0 20px;
+  color: #777;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.drive-button {
+  display: inline-block;
+  background: #1677ff;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.drive-button:hover {
+  opacity: 0.8;
+}
+
+
+.back-home {
+  text-align: center;
+}
