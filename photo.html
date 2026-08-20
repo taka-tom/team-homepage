@@ -12,7 +12,6 @@
 
 <body>
 
-
   <!-- ヘッダー -->
 
   <header>
@@ -57,7 +56,8 @@
 
           <img
             src="IMG_7628.jpeg"
-            alt="TAKAKURA BASKETBALL CLUB">
+            alt="TAKAKURA BASKETBALL CLUB"
+            onclick="openPhoto(this.src)">
 
         </div>
 
@@ -66,7 +66,8 @@
 
           <img
             src="IMG_7629.jpeg"
-            alt="TAKAKURA BASKETBALL CLUB">
+            alt="TAKAKURA BASKETBALL CLUB"
+            onclick="openPhoto(this.src)">
 
         </div>
 
@@ -75,7 +76,8 @@
 
           <img
             src="IMG_7630.jpeg"
-            alt="TAKAKURA BASKETBALL CLUB">
+            alt="TAKAKURA BASKETBALL CLUB"
+            onclick="openPhoto(this.src)">
 
         </div>
 
@@ -133,6 +135,25 @@
   </main>
 
 
+  <!-- 写真拡大表示 -->
+
+  <div
+    id="photo-modal"
+    class="photo-modal"
+    onclick="closePhoto()">
+
+    <span class="photo-close">
+      ×
+    </span>
+
+    <img
+      id="modal-image"
+      src=""
+      alt="拡大写真">
+
+  </div>
+
+
   <!-- フッター -->
 
   <footer>
@@ -142,6 +163,26 @@
     </p>
 
   </footer>
+
+
+  <script>
+
+    function openPhoto(src) {
+
+      document.getElementById("photo-modal").style.display = "flex";
+
+      document.getElementById("modal-image").src = src;
+
+    }
+
+
+    function closePhoto() {
+
+      document.getElementById("photo-modal").style.display = "none";
+
+    }
+
+  </script>
 
 
 </body>
