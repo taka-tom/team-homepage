@@ -29,7 +29,6 @@
 
   <main>
 
-
     <!-- ページタイトル -->
 
     <section class="page-title">
@@ -51,36 +50,26 @@
 
       <div class="photo-gallery">
 
-
         <div class="photo-item">
-
           <img
             src="IMG_7628.jpeg"
             alt="TAKAKURA BASKETBALL CLUB"
-            onclick="openPhoto(this.src)">
-
+            onclick="openPhoto(0)">
         </div>
 
-
         <div class="photo-item">
-
           <img
             src="IMG_7629.jpeg"
             alt="TAKAKURA BASKETBALL CLUB"
-            onclick="openPhoto(this.src)">
-
+            onclick="openPhoto(1)">
         </div>
 
-
         <div class="photo-item">
-
           <img
             src="IMG_7630.jpeg"
             alt="TAKAKURA BASKETBALL CLUB"
-            onclick="openPhoto(this.src)">
-
+            onclick="openPhoto(2)">
         </div>
-
 
       </div>
 
@@ -131,7 +120,6 @@
 
     </section>
 
-
   </main>
 
 
@@ -139,19 +127,135 @@
 
   <div
     id="photo-modal"
-    class="photo-modal"
-    onclick="closePhoto()">
+    class="photo-modal">
 
-    <span class="photo-close">
+    <button
+      class="photo-close"
+      onclick="closePhoto()">
       ×
-    </span>
+    </button>
+
+    <button
+      class="photo-prev"
+      onclick="previousPhoto()">
+      ‹
+    </button>
 
     <img
       id="modal-image"
       src=""
       alt="拡大写真">
 
+    <button
+      class="photo-next"
+      onclick="nextPhoto()">
+      ›
+    </button>
+
   </div>
+
+
+  <!-- JavaScript -->
+
+  <script>
+
+    const photos = [
+      "IMG_7628.jpeg",
+      "IMG_7629.jpeg",
+      "IMG_7630.jpeg"
+    ];
+
+    let currentPhoto = 0;
+
+
+    function openPhoto(index) {
+
+      currentPhoto = index;
+
+      document.getElementById("modal-image").src =
+        photos[currentPhoto];
+
+      document.getElementById("photo-modal").style.display = "flex";
+
+    }
+
+
+    function closePhoto() {
+
+      document.getElementById("photo-modal").style.display = "none";
+
+    }
+
+
+    function nextPhoto() {
+
+      currentPhoto++;
+
+      if (currentPhoto >= photos.length) {
+        currentPhoto = 0;
+      }
+
+      document.getElementById("modal-image").src =
+        photos[currentPhoto];
+
+    }
+
+
+    function previousPhoto() {
+
+      currentPhoto--;
+
+      if (currentPhoto < 0) {
+        currentPhoto = photos.length - 1;
+      }
+
+      document.getElementById("modal-image").src =
+        photos[currentPhoto];
+
+    }
+
+
+    /* スワイプ */
+
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+
+    const modal = document.getElementById("photo-modal");
+
+
+    modal.addEventListener("touchstart", function(event) {
+
+      touchStartX = event.changedTouches[0].screenX;
+
+    });
+
+
+    modal.addEventListener("touchend", function(event) {
+
+      touchEndX = event.changedTouches[0].screenX;
+
+      const distance = touchEndX - touchStartX;
+
+
+      if (Math.abs(distance) < 50) {
+        return;
+      }
+
+
+      if (distance < 0) {
+
+        nextPhoto();
+
+      } else {
+
+        previousPhoto();
+
+      }
+
+    });
+
+  </script>
 
 
   <!-- フッター -->
@@ -163,26 +267,6 @@
     </p>
 
   </footer>
-
-
-  <script>
-
-    function openPhoto(src) {
-
-      document.getElementById("photo-modal").style.display = "flex";
-
-      document.getElementById("modal-image").src = src;
-
-    }
-
-
-    function closePhoto() {
-
-      document.getElementById("photo-modal").style.display = "none";
-
-    }
-
-  </script>
 
 
 </body>
