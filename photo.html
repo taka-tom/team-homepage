@@ -2,67 +2,94 @@
 <html lang="ja">
 
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
 
   <title>PHOTO | TAKAKURA BASKETBALL CLUB</title>
 
   <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.png">
+
+  <link
+    rel="icon"
+    href="ED4C5B30-9C4A-443C-A6EE-A6A13FF634B4.jpeg">
+
+  <link
+    rel="apple-touch-icon"
+    href="ED4C5B30-9C4A-443C-A6EE-A6A13FF634B4.jpeg">
+
 </head>
+
 
 <body>
 
-  <!-- ヘッダー -->
 
- <header>
+  <!-- =========================
+       HEADER
+  ========================== -->
 
-  <h1>
-    TAKAKURA BASKETBALL CLUB
-  </h1>
+  <header>
 
-  <button
-    class="menu-button"
-    onclick="toggleMenu()"
-    aria-label="メニュー">
+    <h1>
+      TAKAKURA BASKETBALL CLUB
+    </h1>
 
-    ☰
+    <button
+      class="menu-button"
+      onclick="toggleMenu()"
+      aria-label="メニュー">
 
-  </button>
+      ☰
 
-</header>
+    </button>
+
+  </header>
 
 
-<!-- ハンバーガーメニュー -->
+  <!-- =========================
+       MOBILE MENU
+  ========================== -->
 
-<nav id="mobile-menu" class="mobile-menu">
+  <nav
+    id="mobile-menu"
+    class="mobile-menu">
 
-  <a href="index.html">
-    HOME
-  </a>
+    <a href="index.html">
+      HOME
+    </a>
 
-  <a href="schedule.html">
-    SCHEDULE
-  </a>
+    <a href="schedule.html">
+      SCHEDULE
+    </a>
 
-  <a href="photo.html">
-    PHOTO
-  </a>
+    <a href="photo.html">
+      PHOTO
+    </a>
 
-  <a href="news.html">
-    NEWS
-  </a>
+    <a href="news.html">
+      NEWS
+    </a>
 
-  <a href="team.html">
-    TEAM
-  </a>
+    <a href="team.html">
+      TEAM
+    </a>
 
-</nav>
+  </nav>
 
+
+  <!-- =========================
+       MAIN
+  ========================== -->
 
   <main>
 
-    <!-- ページタイトル -->
+
+    <!-- =========================
+         PAGE TITLE
+    ========================== -->
 
     <section class="page-title">
 
@@ -77,39 +104,53 @@
     </section>
 
 
-    <!-- 写真 -->
+    <!-- =========================
+         PHOTO GALLERY
+    ========================== -->
 
     <section>
 
       <div class="photo-gallery">
 
+
         <div class="photo-item">
+
           <img
             src="IMG_7628.jpeg"
-            alt="TAKAKURA BASKETBALL CLUB"
+            alt="TAKAKURA BASKETBALL CLUB チーム写真"
             onclick="openPhoto(0)">
+
         </div>
 
+
         <div class="photo-item">
+
           <img
             src="IMG_7629.jpeg"
-            alt="TAKAKURA BASKETBALL CLUB"
+            alt="TAKAKURA BASKETBALL CLUB チーム写真"
             onclick="openPhoto(1)">
+
         </div>
 
+
         <div class="photo-item">
+
           <img
             src="IMG_7630.jpeg"
-            alt="TAKAKURA BASKETBALL CLUB"
+            alt="TAKAKURA BASKETBALL CLUB チーム写真"
             onclick="openPhoto(2)">
+
         </div>
+
 
       </div>
 
     </section>
 
 
-    <!-- Google Drive -->
+    <!-- =========================
+         GOOGLE DRIVE
+    ========================== -->
 
     <section>
 
@@ -143,155 +184,85 @@
     </section>
 
 
-    <!-- ホームへ -->
+    <!-- =========================
+         BACK TO HOME
+    ========================== -->
 
     <section class="back-home">
 
-      <a href="index.html" class="view-all">
+      <a
+        href="index.html"
+        class="view-all">
+
         ← BACK TO HOME
+
       </a>
 
     </section>
 
+
   </main>
 
 
-  <!-- 写真拡大表示 -->
+  <!-- =========================
+       PHOTO MODAL
+  ========================== -->
 
   <div
     id="photo-modal"
     class="photo-modal">
 
+
+    <!-- CLOSE -->
+
     <button
       class="photo-close"
-      onclick="closePhoto()">
+      onclick="closePhoto()"
+      aria-label="閉じる">
+
       ×
+
     </button>
+
+
+    <!-- PREVIOUS -->
 
     <button
       class="photo-prev"
-      onclick="previousPhoto()">
+      onclick="previousPhoto()"
+      aria-label="前の写真">
+
       ‹
+
     </button>
+
+
+    <!-- IMAGE -->
 
     <img
       id="modal-image"
       src=""
       alt="拡大写真">
 
+
+    <!-- NEXT -->
+
     <button
       class="photo-next"
-      onclick="nextPhoto()">
+      onclick="nextPhoto()"
+      aria-label="次の写真">
+
       ›
+
     </button>
+
 
   </div>
 
 
-  <!-- JavaScript -->
-
-  <script>
-
-    const photos = [
-      "IMG_7628.jpeg",
-      "IMG_7629.jpeg",
-      "IMG_7630.jpeg"
-    ];
-
-    let currentPhoto = 0;
-
-
-    function openPhoto(index) {
-
-      currentPhoto = index;
-
-      document.getElementById("modal-image").src =
-        photos[currentPhoto];
-
-      document.getElementById("photo-modal").style.display = "flex";
-
-    }
-
-
-    function closePhoto() {
-
-      document.getElementById("photo-modal").style.display = "none";
-
-    }
-
-
-    function nextPhoto() {
-
-      currentPhoto++;
-
-      if (currentPhoto >= photos.length) {
-        currentPhoto = 0;
-      }
-
-      document.getElementById("modal-image").src =
-        photos[currentPhoto];
-
-    }
-
-
-    function previousPhoto() {
-
-      currentPhoto--;
-
-      if (currentPhoto < 0) {
-        currentPhoto = photos.length - 1;
-      }
-
-      document.getElementById("modal-image").src =
-        photos[currentPhoto];
-
-    }
-
-
-    /* スワイプ */
-
-    let touchStartX = 0;
-    let touchEndX = 0;
-
-
-    const modal = document.getElementById("photo-modal");
-
-
-    modal.addEventListener("touchstart", function(event) {
-
-      touchStartX = event.changedTouches[0].screenX;
-
-    });
-
-
-    modal.addEventListener("touchend", function(event) {
-
-      touchEndX = event.changedTouches[0].screenX;
-
-      const distance = touchEndX - touchStartX;
-
-
-      if (Math.abs(distance) < 50) {
-        return;
-      }
-
-
-      if (distance < 0) {
-
-        nextPhoto();
-
-      } else {
-
-        previousPhoto();
-
-      }
-
-    });
-
-  </script>
-
-
-  <!-- フッター -->
+  <!-- =========================
+       FOOTER
+  ========================== -->
 
   <footer>
 
@@ -301,18 +272,12 @@
 
   </footer>
 
-<script>
 
-  function toggleMenu() {
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
 
-    const menu =
-      document.getElementById("mobile-menu");
-
-    menu.classList.toggle("open");
-
-  }
-
-</script>
+  <script src="script.js"></script>
 
 </body>
 
