@@ -2,69 +2,94 @@
 <html lang="ja">
 
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
 
   <title>NEWS | TAKAKURA BASKETBALL CLUB</title>
 
   <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.png">
+
+  <link
+    rel="icon"
+    href="ED4C5B30-9C4A-443C-A6EE-A6A13FF634B4.jpeg">
+
+  <link
+    rel="apple-touch-icon"
+    href="ED4C5B30-9C4A-443C-A6EE-A6A13FF634B4.jpeg">
+
 </head>
+
 
 <body>
 
 
-  <!-- ヘッダー -->
+  <!-- =========================
+       HEADER
+  ========================== -->
 
-<header>
+  <header>
 
-  <h1>
-    TAKAKURA BASKETBALL CLUB
-  </h1>
+    <h1>
+      TAKAKURA BASKETBALL CLUB
+    </h1>
 
-  <button
-    class="menu-button"
-    onclick="toggleMenu()"
-    aria-label="メニュー">
+    <button
+      class="menu-button"
+      onclick="toggleMenu()"
+      aria-label="メニュー">
 
-    ☰
+      ☰
 
-  </button>
+    </button>
 
-</header>
+  </header>
 
 
-<!-- ハンバーガーメニュー -->
+  <!-- =========================
+       MOBILE MENU
+  ========================== -->
 
-<nav id="mobile-menu" class="mobile-menu">
+  <nav
+    id="mobile-menu"
+    class="mobile-menu">
 
-  <a href="index.html">
-    HOME
-  </a>
+    <a href="index.html">
+      HOME
+    </a>
 
-  <a href="schedule.html">
-    SCHEDULE
-  </a>
+    <a href="schedule.html">
+      SCHEDULE
+    </a>
 
-  <a href="photo.html">
-    PHOTO
-  </a>
+    <a href="photo.html">
+      PHOTO
+    </a>
 
-  <a href="news.html">
-    NEWS
-  </a>
+    <a href="news.html">
+      NEWS
+    </a>
 
-  <a href="team.html">
-    TEAM
-  </a>
+    <a href="team.html">
+      TEAM
+    </a>
 
-</nav>
+  </nav>
 
+
+  <!-- =========================
+       MAIN
+  ========================== -->
 
   <main>
 
 
-    <!-- ページタイトル -->
+    <!-- =========================
+         PAGE TITLE
+    ========================== -->
 
     <section class="page-title">
 
@@ -79,7 +104,9 @@
     </section>
 
 
-    <!-- NEWS一覧 -->
+    <!-- =========================
+         NEWS LIST
+    ========================== -->
 
     <section>
 
@@ -175,12 +202,18 @@
     </section>
 
 
-    <!-- ホームへ戻る -->
+    <!-- =========================
+         BACK TO HOME
+    ========================== -->
 
     <section class="back-home">
 
-      <a href="index.html" class="view-all">
+      <a
+        href="index.html"
+        class="view-all">
+
         ← BACK TO HOME
+
       </a>
 
     </section>
@@ -189,7 +222,9 @@
   </main>
 
 
-  <!-- フッター -->
+  <!-- =========================
+       FOOTER
+  ========================== -->
 
   <footer>
 
@@ -199,18 +234,12 @@
 
   </footer>
 
-<script>
 
-  function toggleMenu() {
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
 
-    const menu =
-      document.getElementById("mobile-menu");
-
-    menu.classList.toggle("open");
-
-  }
-
-</script>
+  <script src="script.js"></script>
 
 </body>
 
