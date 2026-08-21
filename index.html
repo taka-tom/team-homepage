@@ -570,6 +570,9 @@
 
 <script>
 
+  const heroCarousel =
+    document.querySelector(".hero-carousel");
+
   const heroSlides =
     document.querySelectorAll(".hero-slide");
 
@@ -578,6 +581,11 @@
 
   let currentSlide = 0;
 
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+
+  /* スライド表示 */
 
   function showSlide(index) {
 
@@ -604,6 +612,8 @@
   }
 
 
+  /* 次の写真 */
+
   function nextSlide() {
 
     currentSlide++;
@@ -619,12 +629,88 @@
   }
 
 
-  /* 5秒ごとに切り替え */
+  /* 前の写真 */
+
+  function prevSlide() {
+
+    currentSlide--;
+
+    if (currentSlide < 0) {
+
+      currentSlide = heroSlides.length - 1;
+
+    }
+
+    showSlide(currentSlide);
+
+  }
+
+
+  /* 自動切り替え */
 
   setInterval(nextSlide, 5000);
 
-</script>
 
+  /* タッチ開始 */
+
+  heroCarousel.addEventListener(
+    "touchstart",
+    function(event) {
+
+      touchStartX =
+        event.changedTouches[0].screenX;
+
+    },
+    { passive: true }
+  );
+
+
+  /* タッチ終了 */
+
+  heroCarousel.addEventListener(
+    "touchend",
+    function(event) {
+
+      touchEndX =
+        event.changedTouches[0].screenX;
+
+      handleSwipe();
+
+    },
+    { passive: true }
+  );
+
+
+  /* スワイプ判定 */
+
+  function handleSwipe() {
+
+    const distance =
+      touchEndX - touchStartX;
+
+
+    /* 左にスワイプ */
+
+    if (distance < -50) {
+
+      nextSlide();
+
+    }
+
+
+    /* 右にスワイプ */
+
+    if (distance > 50) {
+
+      prevSlide();
+
+    }
+
+  }
+
+</script>
+    
+  
 
 </body>
 
