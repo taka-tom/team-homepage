@@ -1,3 +1,7 @@
+/* ==================================================
+   01. BASIC
+================================================== */
+
 * {
   box-sizing: border-box;
 }
@@ -15,16 +19,22 @@ body {
     "Hiragino Kaku Gothic ProN",
     "Yu Gothic",
     sans-serif;
+
   background: #0b1f3a;
   color: #1677ff;
 }
 
-/* ヘッダー */
+
+/* ==================================================
+   02. HEADER
+================================================== */
 
 header {
   background: #0b1f3a;
   color: white;
+
   padding: 18px 20px;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -32,607 +42,21 @@ header {
 
 header h1 {
   margin: 0;
+
   font-size: 20px;
   letter-spacing: 1px;
 }
 
-header p {
-  display: none;
-}
 
-/* メイン */
-
-main {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-/* ヒーロー */
-
-.hero {
-  min-height: 480px;
-  background: linear-gradient(
-    135deg,
-    #111 0%,
-    #292929 55%,
-    #555 100%
-  );
-
-  display: flex;
-  align-items: flex-end;
-  padding: 40px 25px;
-  color: white;
-  position: relative;
-  overflow: hidden;
-}
-
-.hero::after {
-  content: "BASKETBALL";
-  position: absolute;
-  right: -20px;
-  top: 80px;
-  font-size: 80px;
-  font-weight: 900;
-  color: rgba(255, 255, 255, 0.05);
-  transform: rotate(-90deg);
-}
-
-.hero h2 {
-  font-size: clamp(40px, 10vw, 80px);
-  line-height: 0.95;
-  margin: 0;
-  letter-spacing: -3px;
-}
-
-.hero p {
-  margin: 15px 0 0;
-  font-size: 15px;
-}
-
-/* セクション */
-
-section {
-  padding: 35px 20px;
-}
-
-section h2 {
-  font-size: 13px;
-  letter-spacing: 2px;
-  margin: 0 0 18px;
-  color: #777;
-}
-
-/* 次の予定 */
-
-.next-game {
-  background: #111;
-  color: white;
-  border-radius: 20px;
-  padding: 30px 25px;
-  margin: 0 20px;
-}
-
-.next-game .label {
-  color: #aaa;
-  font-size: 12px;
-  letter-spacing: 2px;
-}
-
-.match {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 20px;
-}
-
-.team {
-  font-size: 22px;
-  font-weight: bold;
-}
-
-.vs {
-  font-size: 13px;
-  color: #aaa;
-}
-
-.date {
-  margin-top: 20px;
-  color: #ccc;
-}
-
-/* メニューカード */
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-}
-
-.card {
-  background: white;
-  border-radius: 18px;
-  padding: 25px 20px;
-  text-decoration: none;
-  color: #111;
-  transition: transform 0.2s;
-}
-
-.card:hover {
-  transform: translateY(-3px);
-}
-
-.card-icon {
-  font-size: 28px;
-}
-
-.card h3 {
-  margin: 15px 0 5px;
-  font-size: 18px;
-}
-
-.card p {
-  margin: 0;
-  font-size: 13px;
-  color: #777;
-}
-
-/* NEWS */
-
-.news-list {
-  background: white;
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
-}
-
-.news-item {
-  padding: 22px 20px;
-  border-bottom: 1px solid #eeeeee;
-}
-
-.news-item:last-child {
-  border-bottom: none;
-}
-
-.news-meta {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 8px;
-}
-
-.news-date {
-  font-size: 12px;
-  color: #888888;
-}
-
-.news-category {
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: #1677ff;
-  border: 1px solid #1677ff;
-  border-radius: 20px;
-  padding: 3px 8px;
-}
-
-.news-item h3 {
-  margin: 0;
-  font-size: 17px;
-  line-height: 1.5;
-  color: #111111;
-}
-
-.news-item p {
-  margin: 8px 0 0;
-  font-size: 13px;
-  color: #777777;
-  line-height: 1.6;
-}
-
-/* フッター */
-
-footer {
-  background: #111;
-  color: #777;
-  text-align: center;
-  padding: 35px 20px;
-  font-size: 12px;
-}
-
-/* スマホ */
-
-@media (max-width: 600px) {
-
-  .hero {
-    min-height: 430px;
-  }
-
-  .cards {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .card {
-    padding: 20px 15px;
-  }
-
-  .team {
-    font-size: 18px;
-  }
-}
-
-/* Googleカレンダー */
-
-#schedule {
-  padding: 35px 20px;
-}
-
-#schedule iframe {
-  width: 100%;
-  height: 600px;
-  border: 0;
-  display: block;
-  border-radius: 18px;
-  background: white;
-}
-
-.calendar-card {
-  background: white;
-  border-radius: 18px;
-  overflow: hidden;
-  border-top: 4px solid #1677ff;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-}
-
-.calendar-card iframe {
-  width: 100%;
-  height: 600px;
-  border: 0;
-  display: block;
-}
-
-/* PHOTO */
-
-.photo-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-}
-
-.photo-grid img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 18px;
-  display: block;
-}
-
-/* VIEW ALL */
-
-.view-all {
-  display: block;
-  margin-top: 15px;
-  padding: 10px 0;
-  background: transparent;
-  color: #1677ff;
-  font-size: 14px;
-  font-weight: 700;
-  text-align: right;
-  text-decoration: none;
-}
-
-.view-all:hover {
-  opacity: 0.7;
-}
-
-
-
-
-
-
-
-/* TEAM PAGE */
-
-.home-link {
-  color: #1677ff;
-  text-decoration: none;
-  font-size: 13px;
-  font-weight: 700;
-}
-
-.page-title {
-  padding-top: 20px;
-}
-
-.page-label {
-  color: #1677ff;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  margin-bottom: 5px;
-}
-
-.team-card {
-  background: white;
-  padding: 28px 22px;
-  border-radius: 18px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
-}
-
-.team-card h3 {
-  margin: 12px 0 18px;
-  font-size: 25px;
-  line-height: 1.2;
-}
-
-.team-card p {
-  color: #666;
-  font-size: 14px;
-  line-height: 1.8;
-}
-
-.activity-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.activity-item {
-  display: flex;
-  gap: 15px;
-  align-items: flex-start;
-  background: white;
-  padding: 20px;
-  border-radius: 18px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
-}
-
-.activity-icon {
-  font-size: 28px;
-  flex-shrink: 0;
-}
-
-.activity-item h3 {
-  margin: 0 0 5px;
-  font-size: 16px;
-}
-
-.activity-item p {
-  margin: 0;
-  color: #666;
-  font-size: 13px;
-  line-height: 1.7;
-}
-
-.back-home {
-  text-align: center;
-}
-
-/* PHOTO PAGE */
-
-.photo-gallery {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-}
-
-.photo-item {
-  overflow: hidden;
-  border-radius: 18px;
-}
-
-.photo-item img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  display: block;
-}
-
-
-.drive-card {
-  margin-top: 10px;
-  background: white;
-  padding: 28px 22px;
-  border-radius: 18px;
-  text-align: center;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
-}
-
-.drive-icon {
-  font-size: 32px;
-  margin-bottom: 10px;
-}
-
-.drive-card h3 {
-  margin: 0 0 8px;
-  font-size: 18px;
-}
-
-.drive-card p {
-  margin: 0 0 20px;
-  color: #777;
-  font-size: 13px;
-  line-height: 1.7;
-}
-
-.drive-button {
-  display: inline-block;
-  background: #1677ff;
-  color: white;
-  padding: 12px 18px;
-  border-radius: 12px;
-  font-size: 13px;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.drive-button:hover {
-  opacity: 0.8;
-}
-
-
-.back-home {
-  text-align: center;
-}
-
-/* PHOTO MODAL */
-
-.photo-item img {
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-.photo-item img:active {
-  transform: scale(0.97);
-}
-
-
-.photo-modal {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  inset: 0;
-
-  background: rgba(0, 0, 0, 0.92);
-
-  align-items: center;
-  justify-content: center;
-
-  padding: 20px;
-}
-
-
-.photo-modal img {
-  max-width: 100%;
-  max-height: 90vh;
-
-  object-fit: contain;
-
-  border-radius: 10px;
-}
-
-
-.photo-close {
-  position: absolute;
-
-  top: 15px;
-  right: 20px;
-
-  color: white;
-
-  font-size: 40px;
-  font-weight: 300;
-
-  line-height: 1;
-
-  cursor: pointer;
-}
-
-/* PHOTO MODAL */
-
-.photo-item img {
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-.photo-item img:active {
-  transform: scale(0.97);
-}
-
-
-.photo-modal {
-  display: none;
-
-  position: fixed;
-  z-index: 9999;
-
-  inset: 0;
-
-  background: rgba(0, 0, 0, 0.94);
-
-  align-items: center;
-  justify-content: center;
-
-  padding: 20px;
-}
-
-
-.photo-modal img {
-  max-width: 90%;
-  max-height: 85vh;
-
-  object-fit: contain;
-
-  border-radius: 10px;
-
-  user-select: none;
-}
-
-
-.photo-close,
-.photo-prev,
-.photo-next {
-  position: absolute;
-
-  border: none;
-
-  background: transparent;
-
-  color: white;
-
-  cursor: pointer;
-
-  z-index: 10000;
-}
-
-
-.photo-close {
-  top: 15px;
-  right: 20px;
-
-  font-size: 40px;
-}
-
-
-.photo-prev {
-  left: 10px;
-
-  top: 50%;
-
-  transform: translateY(-50%);
-
-  font-size: 50px;
-}
-
-
-.photo-next {
-  right: 10px;
-
-  top: 50%;
-
-  transform: translateY(-50%);
-
-  font-size: 50px;
-}
-
-/* SCHEDULE PAGE */
-
-.schedule-page-calendar {
-  overflow: hidden;
-}
-
-.schedule-page-calendar iframe {
-  width: 100%;
-  height: 600px;
-  border: 0;
-  display: block;
-}
-
-/* HAMBURGER MENU */
+/* ==================================================
+   03. HAMBURGER MENU
+================================================== */
 
 .menu-button {
   border: none;
   background: transparent;
+
+  color: white;
 
   font-size: 28px;
 
@@ -640,7 +64,6 @@ footer {
 
   padding: 5px 0 5px 10px;
 }
-
 
 .mobile-menu {
   display: none;
@@ -660,13 +83,10 @@ footer {
   z-index: 999;
 }
 
-
 .mobile-menu.open {
   display: flex;
-
   flex-direction: column;
 }
-
 
 .mobile-menu a {
   padding: 16px 5px;
@@ -678,38 +98,50 @@ footer {
   text-decoration: none;
 
   font-size: 14px;
-
   font-weight: 700;
 }
-
 
 .mobile-menu a:last-child {
   border-bottom: none;
 }
 
-
 .mobile-menu a:active {
   color: #1677ff;
 }
 
-/* HERO CAROUSEL */
+
+/* ==================================================
+   04. MAIN
+================================================== */
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+
+/* ==================================================
+   05. HERO CAROUSEL
+================================================== */
 
 .hero-carousel {
   position: relative;
+
   width: 100%;
   height: 70vh;
+
   min-height: 430px;
   max-height: 700px;
+
   overflow: hidden;
+
   border-radius: 0 0 24px 24px;
 }
-
 
 .hero-slides {
   width: 100%;
   height: 100%;
 }
-
 
 .hero-slide {
   position: absolute;
@@ -720,11 +152,9 @@ footer {
   transition: opacity 0.8s ease;
 }
 
-
 .hero-slide.active {
   opacity: 1;
 }
-
 
 .hero-slide img {
   width: 100%;
@@ -736,13 +166,12 @@ footer {
 }
 
 
-/* 写真の上に少し暗いフィルター */
+/* HERO OVERLAY */
 
 .hero-carousel::after {
   content: "";
 
   position: absolute;
-
   inset: 0;
 
   background: rgba(0, 0, 0, 0.28);
@@ -751,7 +180,7 @@ footer {
 }
 
 
-/* 文字 */
+/* HERO TEXT */
 
 .hero-text {
   position: absolute;
@@ -764,7 +193,6 @@ footer {
   color: white;
 }
 
-
 .hero-text h2 {
   margin: 0;
 
@@ -775,7 +203,6 @@ footer {
   letter-spacing: -1px;
 }
 
-
 .hero-text p {
   margin-top: 18px;
 
@@ -785,7 +212,7 @@ footer {
 }
 
 
-/* ドット */
+/* HERO DOTS */
 
 .hero-dots {
   position: absolute;
@@ -793,14 +220,11 @@ footer {
   z-index: 3;
 
   bottom: 25px;
-
   left: 25px;
 
   display: flex;
-
   gap: 7px;
 }
-
 
 .hero-dot {
   width: 8px;
@@ -817,27 +241,593 @@ footer {
   cursor: pointer;
 }
 
-
 .hero-dot.active {
   background: white;
 
   transform: scale(1.3);
 }
 
-/* SOCIAL LINKS */
+
+/* ==================================================
+   06. COMMON SECTION
+================================================== */
+
+section {
+  padding: 35px 20px;
+}
+
+section h2 {
+  font-size: 13px;
+
+  letter-spacing: 2px;
+
+  margin: 0 0 18px;
+
+  color: #777;
+}
+
+
+/* ==================================================
+   07. NEXT GAME
+================================================== */
+
+.next-game {
+  background: #111;
+
+  color: white;
+
+  border-radius: 20px;
+
+  padding: 30px 25px;
+
+  margin: 0 20px;
+}
+
+.next-game .label {
+  color: #aaa;
+
+  font-size: 12px;
+
+  letter-spacing: 2px;
+}
+
+.match {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 20px;
+}
+
+.team {
+  font-size: 22px;
+
+  font-weight: bold;
+}
+
+.vs {
+  font-size: 13px;
+
+  color: #aaa;
+}
+
+.date {
+  margin-top: 20px;
+
+  color: #ccc;
+}
+
+
+/* ==================================================
+   08. MENU CARDS
+================================================== */
+
+.cards {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 12px;
+}
+
+.card {
+  background: white;
+
+  border-radius: 18px;
+
+  padding: 25px 20px;
+
+  text-decoration: none;
+
+  color: #111;
+
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+.card-icon {
+  font-size: 28px;
+}
+
+.card h3 {
+  margin: 15px 0 5px;
+
+  font-size: 18px;
+}
+
+.card p {
+  margin: 0;
+
+  font-size: 13px;
+
+  color: #777;
+}
+
+
+/* ==================================================
+   09. SCHEDULE / GOOGLE CALENDAR
+================================================== */
+
+.calendar-card {
+  background: white;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  border-top: 4px solid #1677ff;
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.calendar-card iframe,
+.schedule-page-calendar iframe {
+  width: 100%;
+
+  height: 600px;
+
+  border: 0;
+
+  display: block;
+}
+
+.schedule-page-calendar {
+  overflow: hidden;
+}
+
+
+/* ==================================================
+   10. PHOTO
+================================================== */
+
+.photo-grid,
+.photo-gallery {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 12px;
+}
+
+.photo-grid img {
+  width: 100%;
+
+  aspect-ratio: 1 / 1;
+
+  object-fit: cover;
+
+  border-radius: 18px;
+
+  display: block;
+}
+
+.photo-item {
+  overflow: hidden;
+
+  border-radius: 18px;
+}
+
+.photo-item img {
+  width: 100%;
+
+  aspect-ratio: 1 / 1;
+
+  object-fit: cover;
+
+  display: block;
+
+  cursor: pointer;
+
+  transition: transform 0.2s ease;
+}
+
+.photo-item img:active {
+  transform: scale(0.97);
+}
+
+
+/* VIEW ALL */
+
+.view-all {
+  display: block;
+
+  margin-top: 15px;
+
+  padding: 10px 0;
+
+  background: transparent;
+
+  color: #1677ff;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  text-align: right;
+
+  text-decoration: none;
+}
+
+.view-all:hover {
+  opacity: 0.7;
+}
+
+
+/* GOOGLE DRIVE */
+
+.drive-card {
+  margin-top: 10px;
+
+  background: white;
+
+  padding: 28px 22px;
+
+  border-radius: 18px;
+
+  text-align: center;
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.drive-icon {
+  font-size: 32px;
+
+  margin-bottom: 10px;
+}
+
+.drive-card h3 {
+  margin: 0 0 8px;
+
+  font-size: 18px;
+}
+
+.drive-card p {
+  margin: 0 0 20px;
+
+  color: #777;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+}
+
+.drive-button {
+  display: inline-block;
+
+  background: #1677ff;
+
+  color: white;
+
+  padding: 12px 18px;
+
+  border-radius: 12px;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+.drive-button:hover {
+  opacity: 0.8;
+}
+
+
+/* ==================================================
+   11. PHOTO MODAL
+================================================== */
+
+.photo-modal {
+  display: none;
+
+  position: fixed;
+
+  z-index: 9999;
+
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.94);
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+}
+
+.photo-modal img {
+  max-width: 90%;
+
+  max-height: 85vh;
+
+  object-fit: contain;
+
+  border-radius: 10px;
+
+  user-select: none;
+}
+
+.photo-close,
+.photo-prev,
+.photo-next {
+  position: absolute;
+
+  border: none;
+
+  background: transparent;
+
+  color: white;
+
+  cursor: pointer;
+
+  z-index: 10000;
+}
+
+.photo-close {
+  top: 15px;
+  right: 20px;
+
+  font-size: 40px;
+}
+
+.photo-prev {
+  left: 10px;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  font-size: 50px;
+}
+
+.photo-next {
+  right: 10px;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  font-size: 50px;
+}
+
+
+/* ==================================================
+   12. NEWS
+================================================== */
+
+.news-list {
+  background: white;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.news-item {
+  padding: 22px 20px;
+
+  border-bottom: 1px solid #eeeeee;
+}
+
+.news-item:last-child {
+  border-bottom: none;
+}
+
+.news-meta {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 8px;
+}
+
+.news-date {
+  font-size: 12px;
+
+  color: #888888;
+}
+
+.news-category {
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  color: #1677ff;
+
+  border: 1px solid #1677ff;
+
+  border-radius: 20px;
+
+  padding: 3px 8px;
+}
+
+.news-item h3 {
+  margin: 0;
+
+  font-size: 17px;
+
+  line-height: 1.5;
+
+  color: #111111;
+}
+
+.news-item p {
+  margin: 8px 0 0;
+
+  font-size: 13px;
+
+  color: #777777;
+
+  line-height: 1.6;
+}
+
+
+/* ==================================================
+   13. TEAM
+================================================== */
+
+.home-link {
+  color: #1677ff;
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+.page-title {
+  padding-top: 20px;
+}
+
+.page-label {
+  color: #1677ff;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  margin-bottom: 5px;
+}
+
+.team-card {
+  background: white;
+
+  padding: 28px 22px;
+
+  border-radius: 18px;
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.team-card h3 {
+  margin: 12px 0 18px;
+
+  font-size: 25px;
+
+  line-height: 1.2;
+}
+
+.team-card p {
+  color: #666;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+/* ACTIVITY */
+
+.activity-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.activity-item {
+  display: flex;
+
+  gap: 15px;
+
+  align-items: flex-start;
+
+  background: white;
+
+  padding: 20px;
+
+  border-radius: 18px;
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.activity-icon {
+  font-size: 28px;
+
+  flex-shrink: 0;
+}
+
+.activity-item h3 {
+  margin: 0 0 5px;
+
+  font-size: 16px;
+}
+
+.activity-item p {
+  margin: 0;
+
+  color: #666;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+}
+
+.back-home {
+  text-align: center;
+}
+
+
+/* ==================================================
+   14. FOOTER
+================================================== */
+
+footer {
+  background: #111;
+
+  color: #777;
+
+  text-align: center;
+
+  padding: 35px 20px;
+
+  font-size: 12px;
+}
 
 .social-links {
   display: flex;
 
   justify-content: center;
-
   align-items: center;
 
   gap: 22px;
 
   margin-bottom: 20px;
 }
-
 
 .social-icon {
   width: 30px;
@@ -855,13 +845,36 @@ footer {
   transition: transform 0.2s ease;
 }
 
-
 .social-icon svg {
   width: 100%;
   height: 100%;
 }
 
-
 .social-icon:active {
   transform: scale(0.9);
+}
+
+
+/* ==================================================
+   15. MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+
+  .hero-carousel {
+    min-height: 430px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card {
+    padding: 20px 15px;
+  }
+
+  .team {
+    font-size: 18px;
+  }
+
 }
